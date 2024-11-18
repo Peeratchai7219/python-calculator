@@ -6,10 +6,45 @@ class TestCalculator(unittest.TestCase):
     def setUp(self):
         self.calc = Calculator()
 
-    def test_add(self):
-        self.assertEqual(self.calc.add(1, 2), 3)
+    # Test cases for add()
+    def test_add_positive(self):
+        self.assertEqual(self.calc.add(3, 5), 8)
 
-    # Add the following test methods to the TestCalculator class:
+    def test_add_negative(self):
+        self.assertEqual(self.calc.add(-3, -5), -8)
+        
+    # Test cases for subtract()
+    def test_subtract_positive(self):
+        self.assertEqual(self.calc.subtract(10, 5), 5)
+
+    def test_subtract_negative(self):
+        self.assertEqual(self.calc.subtract(-5, -10), 5)
+
+     # Test cases for multiply()
+    def test_multiply_positive(self):
+        self.assertEqual(self.calc.multiply(4, 3), 12)
+
+    def test_multiply_negative(self):
+        self.assertEqual(self.calc.multiply(-4, 3), -12)
+
+    # Test cases for divide()
+    def test_divide_positive(self):
+        self.assertEqual(self.calc.divide(12, 3), 4)
+    
+    # Test cases for divide()
+    def test_divide_positive(self):
+        self.assertEqual(self.calc.divide(12, 3), 4)
+
+    def test_divide_negative(self):
+        self.assertEqual(self.calc.divide(-12, 3), -4)
+
+    # Test cases for modulo()
+    def test_modulo_positive(self):
+        self.assertEqual(self.calc.modulo(10, 3), 1)
+
+    def test_modulo_negative(self):
+        self.assertEqual(self.calc.modulo(-10, 3), -1)
+    
 
 if __name__ == '__main__':
     unittest.main()
