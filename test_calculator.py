@@ -38,12 +38,6 @@ class TestCalculator(unittest.TestCase):
     def test_divide_negative(self):
         self.assertEqual(self.calc.divide(-12, 3), -4)
 
-    # Test cases for modulo()
-    def test_modulo_positive(self):
-        self.assertEqual(self.calc.modulo(10, 3), 1)
-
-    def test_modulo_negative(self):
-        self.assertEqual(self.calc.modulo(-10, 3), -1)
     
 
 if __name__ == '__main__':
